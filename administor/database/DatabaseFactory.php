@@ -1,5 +1,5 @@
 <?php
-    namespace Data;
+    namespace data;
     class DatabaseFactory{
         private $db=0;
         public function __construct(){
@@ -20,5 +20,4 @@
             return $this->$db;
         }
     }
-    $db=new dbconnect();
 ?>
