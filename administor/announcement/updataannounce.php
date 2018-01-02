@@ -1,7 +1,7 @@
 <?php
-    require_once('../layouts/header.php'); 
     extract($_POST);
-    $sql="INSERT INTO `announcement`(`date`, `title`) VALUES ('$date','$announce')";
-    $result=mysqli_query($connect,$sql);
+    use  Data \DatabaseFactory;
+    $db=new DatabaseFactory();
+    $db->exec("INSERT INTO `announcement`(`date`, `title`) VALUES ('$date','$announce')");
     header("location:./?sucessful=新增成功");
 ?>
