@@ -1,7 +1,6 @@
 <?php 
     require_once('../layouts/header.php'); 
-    $sql="select * from member";
-    $result=mysqli_query($connect,$sql);
+    $query=$dbcon->getSelect("select * from member");
 ?>
 <div class="container">
    <table class="table table-hover">
@@ -19,12 +18,10 @@
        </thead>
        <tbody>
            <?php 
-                while($row=mysqli_fetch_array($result)){
-                    for($i=1;$i<=5;$i++)
-                        echo "<th>$row[$i]</th>";
-                    if($row[6])$active="願意";
-                    else $active="不願意";
-                    echo "<th>$active</th><th>$row[0]</th></tr>";
+                foreach($query as $row){
+                    for($i=0;$i<count($row);$i++){
+                        echo count($row);
+                    }
                 }
            ?>
        </tbody>

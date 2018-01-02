@@ -4,10 +4,10 @@ https://coolors.co/e9eb87-e2dbbe-7fb7be-d3f3ee-241623-->
 <?php 
     require_once('../layouts/header.php'); 
     $sql="SELECT * FROM `announcement` ORDER BY `announcement`.`date` DESC";
-    $announce=mysqli_query($connect,$sql);
+    $announce=mysqli_query($db,$sql);
     $date=date("y-m-d");
     $sql="SELECT * FROM `movie` where '$date' BETWEEN  movie_release and  movie_outofdate ORDER BY `movie`.`movie_release` DESC" ;
-    $movie=mysqli_query($connect,$sql);
+    $movie=mysqli_query($db,$sql);
 ?>
 <div class="container">
     <div class="row">

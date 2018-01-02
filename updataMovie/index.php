@@ -1,7 +1,5 @@
 <?php 
     require_once('../layouts/header.php'); 
-    $sql="select * from member";
-    $result=mysqli_query($connect,$sql);
 ?>
 
     
