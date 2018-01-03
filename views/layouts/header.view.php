@@ -3,14 +3,22 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css?v0.2">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!-- dataTable -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.bootstrap4.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.1/js/responsive.bootstrap4.min.js"></script>
     <title>香蕉影城 Banana Cinemas</title>
 </head>
 
 <body>
-    <header class="container-fluid">
+<header class="container-fluid">
         <div class="row">
             <div class="col-12 px-0">
                 <div class="container">
@@ -47,19 +55,25 @@
                         <div class="col-12">
                             <ul class="nav justify-content-around">
                                 <li class="nav-item">
-                                    <a class="nav-link px-5" href="home.php">首頁</a>
+                                    <a class="nav-link px-1" href="home.php">首頁</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-5" href="member.php">會員資料</a>
+                                    <a class="nav-link px-1" href="member.php">會員資料</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-5" href="updata.php">上傳電影</a>
+                                    <a class="nav-link px-1" href="updata.php">上傳電影</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-5" href="setTime.php">更新時刻表</a>
+                                    <a class="nav-link px-1" href="setTime.php">更新時刻表</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-5" href="announce.php">更新公告</a>
+                                    <a class="nav-link px-1" href="announce.php">更新公告</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-1" href="ticket.php">查看票卷銷售情形</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-1" href="ticket.php">電影推薦</a>
                                 </li>
                             </ul>
                         </div>

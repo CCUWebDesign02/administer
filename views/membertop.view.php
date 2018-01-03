@@ -1,5 +1,7 @@
-<div class="container">
-   <table class="table table-hover" id="dataTable">
+<p><br /></p>
+<div class="container-fluid">
+<h1 class="text-center">會員資料</h1>
+   <table class="table table-striped table-bordered table-hover" id="mytable">
        <thead>
             <tr>
                <th>會員帳號</th>

@@ -1,6 +1,7 @@
 </script> 
+<p><br /></p>
   <div class="container">
-<h2>新增活動公告</h2>
+<h1 class="text-center">新增活動公告</h1>
 <form  method="post" action="../app/upData/updataannounce.php" enctype="multipart/form-data">
   <div class="form-group">
     <label for="moviename">日期:</label>

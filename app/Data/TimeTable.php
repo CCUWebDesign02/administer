@@ -23,12 +23,14 @@
             return $query;
         }
         public function deleteTimeTable($theater,$date,$time){
+            $this->db->exec("DELETE FROM `ticket` WHERE theater='$theater' and date='$date' and time='$time'");
             $result=$this->db->exec("DELETE FROM `timetable` WHERE theater_ID='$theater' and date='$date' and time='$time'");
             if($result) return true;
             else return false;
         }
         public function insertTimeTable($theater,$date,$time,$movie){
             $result=$this->db->exec("INSERT INTO `timetable`(`theater_ID`, `date`, `time`, `movieID`) VALUES ('$theater','$date','$time','$movie')");
+            $this->db->exec("INSERT INTO `ticket`(`theater`, `date`, `time`, `moive`) VALUES ('$theater','$date','$time','$movie')");
             if($result) return true;
             else return false;
         }
