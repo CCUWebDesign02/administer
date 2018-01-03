@@ -1,4 +1,4 @@
-<form  method="post" action="updata/updataTimeTable.php" enctype="multipart/form-data" id="form1">
+<form  method="post" action="../app/upData/updataTimeTable.php" enctype="multipart/form-data" id="form1">
 <table class="table table-hover">
     <thead>
         <tr>

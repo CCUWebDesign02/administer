@@ -28,6 +28,6 @@
           }
           echo "</select></td>";
       }
-      echo "<td> <button type='button' class='btn btn-default'  onclick=\"location.href='updata/delect.php?date=$date&theater=$theater&time=$row'\">清空資料</button>";
+      echo "<td> <button type='button' class='btn btn-default'  onclick=\"location.href='../app/upData/Moviedelect.php?date=$date&theater=$theater&time=$row'\">清空資料</button>";
     }
 ?>

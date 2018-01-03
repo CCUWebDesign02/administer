@@ -12,8 +12,8 @@
         $date=$_SESSION['date'];
         $theater=$_SESSION['theater'];
        $result=$TimeTable->insertTimeTable($theater,$date,$time_element,$movie);
-       if(!$result) header("location:../setTime.php?error=更新失敗");
+       if(!$result) header("location:../../public/setTime.php?error=更新失敗");
      }
  }
- header("location:../setTime.php?sucessful=更新成功");
+ header("location:../../public/setTime.php?sucessful=更新成功");
 ?>

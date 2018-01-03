@@ -1,6 +1,6 @@
   <div class="container">
 <h2>上傳新電影</h2>
-<form  method="post" action="updata/updatamovie.php" enctype="multipart/form-data"  id="form1">
+<form  method="post" action="../app/upData/updatamovie.php" enctype="multipart/form-data"  id="form1">
   <div class="form-group">
     <label for="moviename">電影名稱:</label>
     <input type="text" class="form-control" name="moviename" placeholder="Enter MovieName" id="moviename">

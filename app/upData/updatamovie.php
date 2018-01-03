@@ -12,11 +12,11 @@
             $arr=array($moviename,".","jpeg");
             $_FILES["file"]["name"]=join("",$arr);
             move_uploaded_file($_FILES["file"]["tmp_name"],"moviepicture/".$_FILES["file"]["name"]);
-            header("location:../updata.php?sucessful=成功");
+            header("location:../../public/updata.php?sucessful=成功");
         }
-        else header("location:../updata.php?error=檔案格式錯誤");
+        else header("location:../../public/updata.php?error=檔案格式錯誤");
     }
     else 
-        header("location:../updata.php?error=失敗");
+        header("location:../../public/updata.php?error=失敗");
 
 ?>

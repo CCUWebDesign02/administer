@@ -6,7 +6,7 @@
   extract($_POST);
   $_SESSION["theater"]=$theater;
   $_SESSION["date"]=$date;
-  require_once(__DIR__ . '/updata/setTimeMovie.php');
+ require_once(__DIR__ . '/../app/getData/setTimeMovie.php');
   require_once(__DIR__ . '/../views/setTimeTableBottom.view.php');
   require_once(__DIR__ . '/../views/layouts/footer.view.php');
 ?>

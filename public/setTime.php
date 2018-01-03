@@ -4,7 +4,7 @@
   require_once(__DIR__ . '/../permission.php');
   require_once(__DIR__ . '/../views/layouts/header.view.php');
   require_once(__DIR__ . '/../views/setTimetop.view.php');
-  require_once(__DIR__ . '/updata/setTime.php');
+  require_once(__DIR__ . '/../app/getData/setTime.php');
   require_once(__DIR__ . '/../views/setTimebottom.view.php');
   require_once(__DIR__ . '/../views/layouts/footer.view.php');
   if($_GET['sucessful']=='更新成功')

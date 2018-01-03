@@ -5,5 +5,5 @@
     use \Data \TimeTable;
     $TimeTable = new TimeTable();
     $TimeTable->deleteTimeTable($theater,$date,$time);
-    header("location:../setTime.php?sucessful=更新成功");
+    header("location:../../public/setTime.php?sucessful=更新成功");
 ?>
