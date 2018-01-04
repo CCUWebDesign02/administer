@@ -29,5 +29,11 @@
                 $query[]=$row;
             return $query;
         }
+        public function getSelectMovie($movie){
+            $query = Array();
+            foreach($this->db->query("select * from movie where movie_name='$movie'") as $row)
+              $query[]=$row;
+           return $query;
+        }
     }
 ?>

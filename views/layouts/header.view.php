@@ -73,7 +73,7 @@
                                     <a class="nav-link px-1" href="ticket.php">查看票卷銷售情形</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-1" href="ticket.php">電影推薦</a>
+                                    <a class="nav-link px-1" href="recommend.php">電影推薦</a>
                                 </li>
                             </ul>
                         </div>

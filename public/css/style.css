@@ -144,6 +144,30 @@ footer a {
 	margin-top:50px;
 	margin-left:500px;
 }
-div{
-	display:block;
+#body{
+	height:800px;
+}
+#recommend .container-fluid{
+	height: 300px;
+	margin-top:50px;
+}
+#recommend img{
+	width:200px;
+}
+.MovieDetail{
+	margin-top:30px;
+}
+.Detail{
+	display: flex;
+}
+.Detail li:not(:first-child){
+	margin-left: 30px;
+	margin-top:10px;
+}
+.Detail li:first-child{
+	margin-top:10px;
+	margin-left:-20px;
+}
+#upmovie_button{
+	margin-left:500px;
 }
