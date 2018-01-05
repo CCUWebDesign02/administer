@@ -80,7 +80,7 @@
                             }
                             echo "</select></td>";
                         }
-                        echo "<td> <a class=\"fa fa-trash fa-lg\"  onclick=\"location.href='../app/upData/Moviedelect.php?date=$date&theater=$theater&time=$row'\"/>";
+                        echo "<td> <a class=\"fa fa-trash fa-lg\"  href=\"../app/upData/Moviedelect.php?date=$date&theater=$theater&time=$row\"/>";
                     }
                 ?>
 
