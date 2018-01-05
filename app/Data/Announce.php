@@ -14,5 +14,12 @@
                 $query[]=$row;
             return $query;
         }
+       public function editAnnounce($date,$title){
+            $this->db->exec("UPDATE `announcement` SET `date`='$date',`title`='$title' WHERE 1");
+        }
+        public function deleteAnnounce($date,$title){
+            $this->db->exec("DELETE FROM `announcement` WHERE `date`='$date' and `title`='$title'");
+            echo "DELETE FROM `announcement` WHERE `date`='$date' and `title`='$title'";
+        }
     }
 ?>

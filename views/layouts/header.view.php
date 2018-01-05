@@ -64,7 +64,7 @@
                                     <a class="nav-link px-1" href="setTime.php">更新時刻表</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-1" href="announce.php">更新公告</a>
+                                    <a class="nav-link px-1" href="announce.php">公告</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link px-1" href="ticket.php">銷售情形</a>

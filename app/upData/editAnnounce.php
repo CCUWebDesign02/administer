@@ -4,9 +4,6 @@
       use \Data \Announce;
       $Announce = new Announce();
       extract($_POST);
-      $result= $Announce->insertAnnounce($date,$announce);
-      if($result)
-          header("location:../../public/announce.php?sucessful=上傳成功");
-      else 
-          header("location:../../public/announce.php?error=上傳失敗");
+      $result= $Announce->editAnnounce($date,$announce);
+      header("location:../../public/announce.php?sucessful=成功");
 ?>

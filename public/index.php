@@ -11,7 +11,7 @@
             $_SESSION['admin_account']=$account;
             $_SESSION['admin_password']=$password;
             $_SESSION['admin_name']=$admin->getName();
-            header("location:home.php");
+            header("location:ticket.php");
         }
         else{
             echo "<script>
