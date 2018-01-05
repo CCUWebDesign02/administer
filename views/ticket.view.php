@@ -24,7 +24,7 @@
                 echo "<tr>";
                 for($i=0;$i<6;$i++)
                 echo "<td>".$row[$i]."</td>";
-                echo "<td> <button type='button' class='btn btn-default'  onclick=\"location.href='../app/upData/123.php?id=".$row[6]."'\">查看資料</button>";
+                echo "<td> <a class=\"fa fa-ticket fa-lg\" href=\"ticketrecord.php?ticketrecord=".$row['ticket_ID']."\"\></td>";
                 echo "</tr>";
             }
             ?>

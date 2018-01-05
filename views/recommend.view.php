@@ -19,7 +19,7 @@
             <img src="moviepicture/<?php echo$recommendList[0]['movie_ID'].".jpeg"?>" alt="<?php echo $recommendList[0]['movie_ID'];?>">
         </div>
         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 MovieIntroduce">   
-        <div class="input-group">
+        <div class="input-group movie_select">
             <span class="input-group-addon">上架電影</span>
             <input id="selShowingDate" type="text" class="form-control" contenteditable="false" value="<?php echo $recommendList[0]['movie_ID'];?>" readonly="true">
             <div class="input-group-btn">
@@ -29,7 +29,7 @@
         </div>
         <h1 class="MovieDetail"><?php echo $recommendList[0]['movie_ID'];?></h1>
         <ul class="Detail">
-            <li clase="glyphicon glyphicon-calendar"> 上映日期：<?php echo $recommendList[0]['releasedate'];?></li>
+            <li> 上映日期：<?php echo $recommendList[0]['releasedate'];?></li>
             <li> 片長：1時45分</li>
             <li> 分級：<?php echo $recommendList[0]['rating'];?></li>
         </ul>
@@ -42,7 +42,7 @@
             <img src="moviepicture/<?php echo$recommendList[1]['movie_ID'].".jpeg"?>" alt="<?php echo$recommendList[1]['movie_ID'];?>">
         </div>
         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 MovieIntroduce">   
-            <div class="input-group">
+            <div class="input-group movie_select">
                 <span class="input-group-addon">上架電影</span>
                 <input id="selShowingDate" type="text" class="form-control" contenteditable="false" value="<?php echo $recommendList[1]['movie_ID'];?>" readonly="true">
                 <div class="input-group-btn">
@@ -65,7 +65,7 @@
             <img src="moviepicture/<?php echo$recommendList[2]['movie_ID'].".jpeg"?>" alt="<?php echo $recommendList[2]['movie_ID'];?>">
         </div>
         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 MovieIntroduce">   
-            <div class="input-group">
+            <div class="input-group movie_select">
                 <span class="input-group-addon">上架電影</span>
                 <input id="selShowingDate" type="text" class="form-control" contenteditable="false" value="<?php echo $recommendList[2]['movie_ID'];?>" readonly="true">
                 <div class="input-group-btn">

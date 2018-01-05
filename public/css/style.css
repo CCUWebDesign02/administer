@@ -171,3 +171,21 @@ footer a {
 #upmovie_button{
 	margin-left:500px;
 }
+.fa-user-circle-o{
+	padding-top:10px;
+}
+.fa-shopping-cart{
+	margin-left: 50px;
+}
+.fa-ticket{
+	margin-left: 80px;
+}
+.movie_select span{
+	margin-top:7px;
+}
+.movie_select input{
+	margin-left:10px;
+}
+.fa-comment{
+	margin-left:30px;
+}
