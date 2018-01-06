@@ -2,7 +2,7 @@
 <div class="container">
   <h1 class="text-center">上傳新電影</h1>
   <hr/>
-  <form  method="post" action="../app/UpDate/UpdateMovie.php" enctype="multipart/form-data"  id="form1">
+  <form  method="post" action="../app/UpDate/UpDateMovie.php" enctype="multipart/form-data"  id="form1">
     <div class="form-group">
       <label for="moviename">電影中文名稱:</label>
       <input type="text" class="form-control" name="zh_name" placeholder="Enter ZH_Name" >

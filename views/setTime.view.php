@@ -77,7 +77,7 @@
                             }
                             echo "</select></td>";
                         }
-                        echo "<td> <a class=\"fa fa-trash fa-lg\"  href=\"../app/upDate/MovieDelect.php?theater=".$_SESSION['theater']."&date=".$_SESSION['date']."&time=$row\"/>";
+                        echo "<td> <a class=\"fa fa-trash fa-lg\"  href=\"../app/UpDate/MovieDelect.php?theater=".$_SESSION['theater']."&date=".$_SESSION['date']."&time=$row\"/>";
                         echo"</tr>";
                     }
                ?>

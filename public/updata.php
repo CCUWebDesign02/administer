@@ -6,9 +6,9 @@
   require_once(__DIR__ . '/../views/layouts/header.view.php');
   require_once(__DIR__ . '/../views/updata.view.php');
   require_once(__DIR__ . '/../views/layouts/footer.view.php');
-  if($_GET['sucessful']=='成功')
+  if($_GET['sucessful']=='上傳成功')
     echo "<script>setTimeout(\"alert('上傳成功')\" , 0);</script>";
-  else if($_GET['error']=='失敗')
+  else if($_GET['error']=='上傳失敗')
     echo "<script>setTimeout(\"alert('上傳失敗')\" , 0);</script>";
   else if($_GET['error']=='檔案格式錯誤')
   echo "<script>setTimeout(\"alert('檔案格式錯誤')\" , 0);</script>";
