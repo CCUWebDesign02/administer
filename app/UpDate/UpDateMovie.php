@@ -9,7 +9,7 @@
          header("location:../../public/updata.php?error=檔案格式錯誤");
     $now = new \DateTime("now", new \DateTimeZone("UTC"));
     $now_str = $now->format('Y-m-d H:i:s');
-    if(!($Movie->insertMovie($zh_name,$en_name,$time,$rating,$release,$director,$actor,$intro,$url,$now_str,$now_str)));
+    if(!($Movie->insertMovie($zh_name,$en_name,$time,$rating,$release,$director,$actor,$intro,$url,$now_str,$now_str)))
         header("location:../../public/updata.php?error=上傳失敗");
     $id=$Movie->getMovieID($zh_name,$en_name);
     $File_Extension = explode(".", $_FILES['file']['name']);

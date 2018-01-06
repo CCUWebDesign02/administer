@@ -13,7 +13,7 @@
                 VALUES ('$zh_name','$en_name','$duration','$rating','$release','$director','$actors','$intor','$trailer_url','$update','$created')")) ? true:false;
         }
         public function insertPhoto($movie_id,$type,$src){
-            $this->getDB()->exec("INSERT INTO `movie_resource`(`movie_id`, `type`, `src`) VALUES ($movie_id,'$type','$src')");
+           return ( $this->getDB()->exec("INSERT INTO `movie_resource`(`movie_id`, `type`, `src`) VALUES ($movie_id,'$type','$src')"))?true:false;
         }
         public function editMovie($movie_id,$zh_name,$en_name,$duration,$rating,$release,$director,$actors,$intor,$trailer_url,$update,$created){
             return  ($this->getDB()->exec("UPDATE `movie_resource` SET `zh_name` = '$zh_name', `en_name`= '$en_name', `duration`='$duration'
