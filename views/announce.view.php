@@ -21,7 +21,7 @@
                     echo "<tr>";
                     for($i=0;$i<4;$i++)
                     echo "<td>".$element[$i],"</td>";
-                    echo "<td> <a class=\"fa fa-trash fa-lg\" href=\"../app/Update/DeleteAnnounce.php?id=".$element['id']."\"/></td>";
+                    echo "<td> <a class=\"fa fa-trash fa-lg\" href=\"../app/UpDate/DeleteAnnounce.php?id=".$element['id']."\"/></td>";
                     echo "<td><a class=\"fa fa-pencil-square-o fa-lg\" href=\"EditAnnounce.php?id=".$element['id']."\"/></td>";
                     echo "</tr>";
                 }

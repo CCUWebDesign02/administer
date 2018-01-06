@@ -1,6 +1,5 @@
 <?php
     require_once(__DIR__ . '/../autoload.php');
-    session_start();
     use \Data \TimeTable;
     use \Data \Movie;
     $TimeTable = new TimeTable();
@@ -46,7 +45,7 @@
     </div>
     <hr/>
     <div class="container">
-    <form  method="post" action="../app/UpDate/UpdateTimeTable.php" enctype="multipart/form-data" id="form1">
+    <form  method="post" action="../app/UpDate/UpDateTimeTable.php" enctype="multipart/form-data" id="form1">
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -61,13 +60,15 @@
                <?php
                     $time=$TimeTable->getTime();
                     foreach($time as $row){
-                        echo"<tr>";
+                       echo"<tr>";
                         echo "<td>".$_SESSION['theater']."</td>";
                         echo "<td>".$_SESSION['date']."</td>";
                         echo "<td>".$row."</td>";
                         $element=$TimeTable->is_On($_SESSION['theater'],$_SESSION['date'],$row);
-                        if($element)
-                            echo "<td>".$element."</td>";
+                        if($element) {
+                            $name=$TimeTable->getMovieName($element);
+                            echo "<td>".$name."</td>";
+                        }
                         else {
                             echo "<td><select class='form-control' name='movie_select$row'>" ;
                             echo "<option></option>";
@@ -89,4 +90,3 @@
     </div>
 </div>
 
-<!--  echo "<td> <a class=\"fa fa-trash fa-lg\"  href=\"../app/upData/Moviedelect.php?date=$date&theater=$theater&time=$row\"/>"; -->

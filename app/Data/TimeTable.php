@@ -22,9 +22,7 @@
             $query=$this->getDB()->query("SELECT `theater_ID`, `DateTime`,  `movieID` FROM `timetable` WHERE theater_ID='$theater' and DateTime='$datetime'");
             $row=$query->fetch();
             if(empty($row)) return false;
-            else {
-                return $this->getMovieName($row['movieID']);
-            }
+            else return $row['movieID'];
         }
        
         public function getDate(){
