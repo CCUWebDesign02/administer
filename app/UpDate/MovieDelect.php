@@ -4,6 +4,6 @@
     require_once(__DIR__ . '/../../autoload.php');
     use \Data \TimeTable;
     $TimeTable = new TimeTable();
-    $TimeTable->deleteTimeTable($theater,$date,$time);
+    $TimeTable->DeleteMovie($theater,$date,$time);
     header("location:../../public/setTime.php?sucessful=更新成功");
 ?>

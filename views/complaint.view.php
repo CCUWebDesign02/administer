@@ -2,6 +2,8 @@
     require_once(__DIR__ . '/../autoload.php');
     extract($_GET);
     use \Data \Complaint;
+    use \Data \Member;
+    $Member=new Member();
     $Complaint=new Complaint();
     $complaintlist=$Complaint->getComplaint();
 ?>
@@ -23,9 +25,10 @@
         <tbody>
            <?php
                 foreach($complaintlist as $row){
+                    $name=$Member->getUserName($row['user_id']);
                     $responsedate= ($row['responsedate']=='')?"尚未回覆" : $row['responsedate'];
-                    echo "<tr><td>".$row['account']."</td><td>".$row['date']."</td><td>".$row['complaint']."</td>";
-                    echo "<td> <a class=\"fa fa-comment fa-lg\" href=\"response.php?complaintID=".$row['complaintID']."\"\></td>";
+                    echo "<tr><td>".$name."</td><td>".$row['date']."</td><td>".$row['complaint']."</td>";
+                    echo "<td> <a class=\"fa fa-comment fa-lg\" href=\"response.php?name=$name&complaintID=".$row['complaintID']."\"\></td>";
                     echo "<td>".$Complaint->getString($row['isresponse'])."</td>";
                     echo "<td>$responsedate</td></tr>";
                 }

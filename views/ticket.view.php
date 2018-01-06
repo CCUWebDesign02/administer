@@ -7,7 +7,6 @@
             <tr>
                 <th>廳次</th>
                 <th>日期</th>
-                <th>時間</th>
                 <th>電影</th>
                 <th>數量</th>
                 <th>價錢</th>
@@ -18,13 +17,15 @@
             <?php
             require_once(__DIR__ . '/../autoload.php');
             use \Data \Ticket;
+            use \Data \TimeTable;
+            $TimeTable=new TimeTable();
             $Ticket = new Ticket();
             $ticket_data=$Ticket->getTicket();
             foreach($ticket_data as $row){
+                $name=$TimeTable->getMovieName($row['movie_id']);
                 echo "<tr>";
-                for($i=0;$i<6;$i++)
-                echo "<td>".$row[$i]."</td>";
-                echo "<td> <a class=\"fa fa-ticket fa-lg\" href=\"ticketrecord.php?ticketrecord=".$row['ticket_ID']."\"\></td>";
+                echo "<td>".$row['hall']."</td><td>".$row['showing_time']."</td><td>".$name."</td><td>".$row['remanded']."</td><td>250</td>";
+                echo "<td> <a class=\"fa fa-ticket fa-lg\" href=\"ticketrecord.php?ticketrecord=".$row['id']."\"\></td>";
                 echo "</tr>";
             }
             ?>
@@ -33,7 +34,6 @@
             <tr>
                 <th>廳次</th>
                 <th>日期</th>
-                <th>時間</th>
                 <th>電影</th>
                 <th>數量</th>
                 <th>價錢</th>

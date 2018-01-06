@@ -4,9 +4,12 @@
    <table class="table table-striped table-bordered table-hover" id="mytable">
        <thead>
             <tr>
-               <th>日期</th>
-               <th>公告</th>
+               <th>公告編號</th>
+               <th>公告標題</th>
+               <th>公告內容</th>
+               <th>上傳日期</th>
                <th>刪除</th>
+               <th>編輯</th>
        </thead>
        <tbody>
             <?php
@@ -14,19 +17,24 @@
                 use \Data \Announce;
                 $Announce = new Announce();
                 $announcelist=$Announce->getAnnounce();
-                foreach($announcelist as $row){
+                foreach($announcelist as $element){
                     echo "<tr>";
-                    echo "<td>".$row['date']."</td><td>".$row['title']."</td>";
-                    echo "<td> <a class=\"fa fa-trash fa-lg\" href=\"../app/updata/deleteAnnounce.php?date=".$row['date']."&title=".$row['title']."\"\></td>";
+                    for($i=0;$i<4;$i++)
+                    echo "<td>".$element[$i],"</td>";
+                    echo "<td> <a class=\"fa fa-trash fa-lg\" href=\"../app/Update/DeleteAnnounce.php?id=".$element['id']."\"/></td>";
+                    echo "<td><a class=\"fa fa-pencil-square-o fa-lg\" href=\"EditAnnounce.php?id=".$element['id']."\"/></td>";
                     echo "</tr>";
                 }
             ?>
        </tbody>
        <tfoot>
             <tr>
-               <th>日期</th>
-               <th>公告</th>
-               <th>刪除</th>
+                <th>公告編號</th>
+                <th>公告標題</th>
+                <th>公告內容</th>
+                <th>上傳日期</th>
+                <th>刪除</th>
+                <th>編輯</th>
        </tfoot>
 </table>
 <div class="selectbtn">

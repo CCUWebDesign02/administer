@@ -5,8 +5,8 @@
     require_once(__DIR__ . '/../views/layouts/header.view.php');
     require_once(__DIR__ . '/../views/announce.view.php');
     require_once(__DIR__ . '/../views/layouts/footer.view.php');
-    if($_GET['sucessful']=='上傳成功')
-    echo "<script>setTimeout(\"alert('成功')\" , 0);</script>";
-else if($_GET['error']=='上傳失敗')
-    echo "<script>setTimeout(\"alert('失敗')\" , 0);</script>";
+    if($_GET['sucessful']=='更新成功')
+    echo "<script>setTimeout(\"alert('更新成功')\" , 0);</script>";
+    else if($_GET['error']=='更新失敗')
+    echo "<script>setTimeout(\"alert('更新失敗')\" , 0);</script>";
  ?>

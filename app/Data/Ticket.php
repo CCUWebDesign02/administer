@@ -1,14 +1,12 @@
 <?php
     namespace Data ;
-    class Ticket extends DatabaseFactory{
-        public $query=Array();
-        public function __construct(){
-            parent::__construct();
-        }
+    use Data \DataFactory;
+    class Ticket extends DataFactory{
         public function getTicket(){
-           foreach($this->db->query("select * from ticket") as $row)
-              $this->query[]=$row;
-           return $this->query;
+            $query=Array();
+            foreach($this->getDB()->query("SELECT * FROM `tickets` WHERE 1") as $row)
+                $query[]=$row;
+            return $query;
         }
     }
 ?>

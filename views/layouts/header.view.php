@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css?v0.2">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- dataTable -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -41,7 +43,7 @@
                             </div>
                             <div class="row">
                                 <span class="fa fa-user-circle-o fa-lg"><?php echo $_SESSION['admin_name'];?></span>
-                                <button type="button" class="btn btn-top" onclick="location.href='../logout.php'">登出</button>
+                                <button type="button" class="btn btn-top" onclick="location.href='logout.php'">登出</button>
                             </div>
                         </div>
                     </div>
@@ -70,7 +72,7 @@
                                     <a class="nav-link px-1" href="ticket.php">銷售情形</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-1" href="recommend.php">電影推薦</a>
+                                    <a class="nav-link px-1" href="recommend.php">電影海報上傳</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link px-1" href="complaint.php">客訴服務</a>

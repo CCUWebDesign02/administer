@@ -17,7 +17,7 @@
         </div>
         <div class="row" >
             <div class="col-md-offset-4 col-md-4 well">   <!--將畫面設為在版面的中間-->
-                <form id="form1" name="form1" method="post" action="index.php" onclick="return false">   
+                <form id="form1" name="form1" method="post" action="login.php" onclick="return false">   
                     <div class="form-group">
                         <label for="exampleInputAccount">帳號</label>
                         <input type="text" class="form-control" name="account" placeholder="請輸入帳號" size="20" id="account">

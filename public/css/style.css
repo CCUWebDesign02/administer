@@ -147,8 +147,8 @@ footer a {
 #body{
 	height:800px;
 }
-#recommend .container-fluid{
-	height: 400px;
+#recommend {
+	height: 700px;
 	margin-top:50px;
 }
 #recommend img{
@@ -170,6 +170,7 @@ footer a {
 }
 #upmovie_button{
 	margin-left:500px;
+	margin-top:50px;
 }
 .fa-user-circle-o{
 	padding-top:10px;
@@ -188,4 +189,7 @@ footer a {
 }
 .fa-comment{
 	margin-left:30px;
+}
+.moivePicture{
+	margin-top :100px;
 }

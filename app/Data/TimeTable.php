@@ -1,51 +1,64 @@
 <?php
     namespace Data ;
-    class TimeTable extends DatabaseFactory{
-        public function __construct(){
-            parent::__construct();
-        }
+    use Data \DataFactory;
+    class TimeTable extends DataFactory{
         public function getTimeTable(){
             $query=Array();
-            foreach($this->db->query("select * from timetable") as $row)
+            foreach($this->getDB()->query("select * from timetable") as $row)
                 $query[]=$row;
             return $query;
         }
         public function getTheater(){
             $query=Array();
-            foreach($this->db->query("select * from theater")as $row)
+            foreach($this->getDB()->query("select * from theater")as $row)
                 $query[]=$row;
             return $query;
         }
-        public function getTheaterTimeTable($theater,$date){
-            $query=Array();
-            foreach($this->db->query("select * from timetable where theater_id='$theater' and date='$date'")as $row)
-                $query[]=$row;
-            return $query;
+        public function is_On($theater,$date,$time){
+            $tem=Array($date,$time);
+            $datetime=implode(" ",$tem);
+            $tem=Array($date,$time);
+            $datetime=implode(" ",$tem);
+            $query=$this->getDB()->query("SELECT `theater_ID`, `DateTime`,  `movieID` FROM `timetable` WHERE theater_ID='$theater' and DateTime='$datetime'");
+            $row=$query->fetch();
+            if(empty($row)) return false;
+            else {
+                return $this->getMovieName($row['movieID']);
+            }
         }
-        public function deleteTimeTable($theater,$date,$time){
-            $this->db->exec("DELETE FROM `ticket` WHERE theater='$theater' and date='$date' and time='$time'");
-            $result=$this->db->exec("DELETE FROM `timetable` WHERE theater_ID='$theater' and date='$date' and time='$time'");
-            if($result) return true;
-            else return false;
-        }
-        public function insertTimeTable($theater,$date,$time,$movie){
-            $result=$this->db->exec("INSERT INTO `timetable`(`theater_ID`, `date`, `time`, `movieID`) VALUES ('$theater','$date','$time','$movie')");
-            $this->db->exec("INSERT INTO `ticket`(`theater`, `date`, `time`, `moive`) VALUES ('$theater','$date','$time','$movie')");
-            if($result) return true;
-            else return false;
-        }
+       
         public function getDate(){
             $query=Array();
             $date=date("y-m-d");
             for($i=0;$i<10;$i++)$query[]=date('Y-m-d', strtotime("+$i days"));
             return $query;
         }
-        public function insertDate($date){
-            $this->db->exec("INSERT INTO `Date`(`Date`) VALUES ('$date') ");
-        }
         public function getTime(){
                 $time =Array("10:00:00","12:00:00","14:00:00","16:00:00","18:00:00","20:00:00","22:00:00");
             return $time;
+        }
+        public function getMovieName($id){
+            $query=$this->getDB()->query("SELECT `id`, `zh_name`, `en_name`, `duration`, `rating`, `released`, `director`, `actors`, `intro`, `trailer_url`, `updated_at`, `created_at` 
+            FROM `movies` WHERE id='$id'");
+            $row =$query->fetch();
+            return $row['zh_name'];
+        }
+        public function DeleteMovie($theater,$date,$time){
+            $tem=Array($date,$time);
+            $datetime=implode(" ",$tem);
+            $resutl1=$this->getDB()->query("DELETE FROM `timetable` WHERE theater_ID='$theater' and DateTime='$datetime' ");
+            $resutl2=$this->getDB()->query("DELETE FROM `tickets` WHERE showing_time='$datetime'");
+            return ($resutl1||$resutl2)?true:false;
+        }
+        public function InsertTimeTable($theater,$date,$time,$movie){
+            $tem=Array($date,$time);
+            $now = new \DateTime("now", new \DateTimeZone("UTC"));
+            $now_str = $now->format('Y-m-d H:i:s');
+            $datetime=implode(" ",$tem);
+            $resutl1=$this->getDB()->query("INSERT INTO `timetable`(`theater_ID`, `DateTime`, `movieid`) VALUES ('$theater','$datetime','$movie')");
+            $resutl2= $this->getDB()->query("INSERT INTO `tickets`(`movie_id`, `showing_time`, `hall`, `updated_at`,`created_at`)
+            VALUES ('$movie','$datetime','$theater','$now_str','$now_str')");
+            ($resutl1||$resutl2)? true:false;
         }
     }
 ?>
