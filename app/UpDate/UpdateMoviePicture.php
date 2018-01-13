@@ -11,10 +11,10 @@
     $name=sprintf("%08d",$movieID);
     $arr=array("MR-",$name,"-banner.",$File_Extension[1]);
     $_FILES["file"]["name"]=join("",$arr);
-    move_uploaded_file($_FILES["file"]["tmp_name"],"../../public/imgs/movie/".$_FILES["file"]["name"]);
+    move_uploaded_file($_FILES["file"]["tmp_name"],"/www/team02/public/imgs/movie/".$_FILES["file"]["name"]);
     $src=$_FILES["file"]["name"];
-    if(!$Movie->isExistPhoto($src)) header("location:../../public/Recommend.php?error=上傳失敗");
+    if(!$Movie->isExistPhoto($src)) header("location:../../public/recommend.php?error=上傳失敗");
     $Movie->insertPhoto($movieID,"banner",$src);
     $source=$Movie->getResourceID($movieID,"banner",$src);
-    ($Movie->insertcarousel($source,$src))?header("location:../../public/Recommend.php?sucessful=上傳成功"):header("location:../../public/Recommend.php?error=上傳失敗");
+    ($Movie->insertcarousel($source,$src))?header("location:../../public/recommend.php?sucessful=上傳成功"):header("location:../../public/recommend.php?error=上傳失敗");
 ?>

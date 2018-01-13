@@ -16,7 +16,9 @@
     $name=sprintf("%08d",$id);
     $arr=array("MR-",$name,"-poster.",$File_Extension[1]);
     $_FILES["file"]["name"]=join("",$arr);
-    move_uploaded_file($_FILES["file"]["tmp_name"],"../../public/imgs/movie/".$_FILES["file"]["name"]);
+    move_uploaded_file($_FILES["file"]["tmp_name"],"/www/team02/public/imgs/movie/".$_FILES["file"]["name"]);
+    echo "/www/team02/public/imgs/movie/".$_FILES['file']["name"]; 
     $src=$_FILES["file"]["name"];
     ($Movie->insertPhoto($id,"poster",$src))?header("location:../../public/updata.php?sucessful=上傳成功"):header("location:../../public/updata.php?error=上傳失敗");
+
 ?>
